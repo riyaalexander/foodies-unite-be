@@ -5,9 +5,10 @@ const db = require('../db');
 // Create a new recipe
 router.post('/', async (req, res) => {
   try {
-    const { title, description, ingredients, instructions, prep_time, difficulty } = req.body;
+    const { title, image_url, description, ingredients, instructions, prep_time, difficulty } = req.body;
     const newRecipe = await db('recipes').insert({
       title,
+      image_url,
       description,
       ingredients,
       instructions,
