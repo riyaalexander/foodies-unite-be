@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 5500
-const errorHandler = require('./middleware/errorHandler')
+const errorHandler = require('./middleware/errorHandler.js')
 const db = require('./db');
 
 app.use(express.json());
@@ -13,8 +13,7 @@ const recipesRoutes = require('./routes/recipes');
 app.use('/recipes', recipesRoutes);
 
 app.get('/', (req, res) => {
-    console.log('GET request received on root endpoint');
-  res.send('whats up, world!');
+  res.send('Hello, world!');
 });
 
 app.listen(port, () => {
