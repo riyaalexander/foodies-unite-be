@@ -13,7 +13,6 @@ const recipesRoutes = require('./routes/recipes');
 app.use('/recipes', recipesRoutes);
 
 app.get('/', (req, res) => {
-  console.log("Hi");
   res.send('Hello, world!');
 });
 

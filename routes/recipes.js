@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const db = require('/Users/riyaalexander/Documents/Pursuit/Mod/foodies-unite-be/db.js');
+// const { v4: uuidv4 } = require('uuid');
 
 // Create a new recipe
 router.post('/', async (req, res) => {
   try {
     const { id, title, image_url, description, ingredients, instructions, prep_time, difficulty } = req.body;
+    // const id = uuidv4();
     const newRecipe = await db('recipes').insert({
       id,
       title,
@@ -16,7 +18,7 @@ router.post('/', async (req, res) => {
       prep_time,
       difficulty
     });
-    res.status(201).json(newRecipe);
+    res.status(201).json({ id, ...newRecipe });
   } catch (error) {
     res.status(500).json({ error: 'Unable to create recipe' });
   }
