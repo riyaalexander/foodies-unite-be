@@ -7,6 +7,7 @@
   await knex('recipes').del();
   await knex('recipes').insert([
     {
+      id: 1,
       title: 'Chocolate Chip Cookies',
       image_url: 'https://pinchofyum.com/wp-content/uploads/Chocolate-Chip-Cookies-Recipe.jpg',
       description: 'Delicious homemade chocolate chip cookies',
@@ -16,6 +17,7 @@
       difficulty: 'Easy'
     },
     {
+      id: 2,
       title: 'Omelette',
       image_url: 'https://www.acouplecooks.com/wp-content/uploads/2021/02/Omelette-007.jpg',
       description: 'A classic omelette recipe',
@@ -25,6 +27,7 @@
       difficulty: 'Easy'
     },
     {
+      id: 3,
       title: 'Oatmeal',
       image_url: 'https://oneinthekitchen.com/wp-content/uploads/2019/02/Classic-Oatmeal-With-Milk.jpg',
       description: 'A warm and hearty breakfast option',
@@ -34,6 +37,7 @@
       difficulty: 'Easy'
     },
     {
+      id: 4,
       title: 'Grilled Cheese',
       image_url: 'https://cdn.loveandlemons.com/wp-content/uploads/2023/01/grilled-cheese-sandwich.jpg',
       description: 'A classic and comforting sandwich',
@@ -43,6 +47,7 @@
       difficulty: 'Easy'
     },
     {
+      id: 5,
       title: 'Bahn Mi',
       image_url: 'https://www.allrecipes.com/thmb/ieRkFw0X8NX5nzZcOVSPHL2ElOU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/roasted-pork-banh-mi-vietnamese-sandwitch-ddmfs-3X4-0332-cfb4d2e149e7476ab2a2b4030c543f1b.jpg',
       description: 'A delicious Vietnamese sandwich',
@@ -52,6 +57,7 @@
       difficulty: 'Intermediate'
     },
     {
+      id: 6,
       title: 'Chicken Noodle Soup',
       image_url: 'https://www.averiecooks.com/wp-content/uploads/2015/09/chickennoodlesoup-5.jpg',
       description: 'A comforting and classic soup',
@@ -61,6 +67,7 @@
       difficulty: 'Easy'
     },
     {
+      id: 7,
       title: 'Crispy Fried Chicken',
       image_url: 'https://iwashyoudry.com/wp-content/uploads/2021/06/Crispy-Fried-Chicken-Recipe-6.jpg',
       description: 'Classic southern-style fried chicken',
@@ -70,6 +77,7 @@
       difficulty: 'Intermediate'
     },
     {
+      id: 8,
       title: 'Penne alla Vodka',
       image_url: 'https://thecozycook.com/wp-content/uploads/2023/01/Penne-Alla-Vodka-1-.jpg',
       description: 'Creamy pasta dish with a touch of vodka',
@@ -79,6 +87,7 @@
       difficulty: 'Easy'
     },
     {
+      id: 9,
       title: 'Lemon Herb Roasted Chicken',
       image_url: 'https://s23209.pcdn.co/wp-content/uploads/2018/06/211129_DAMN-DELICIOUS_Lemon-Herb-Roasted-Chx_059.jpg',
       description: 'Juicy and flavorful roasted chicken with a citrusy twist',
@@ -88,6 +97,7 @@
       difficulty: 'Intermediate'
     },
     {
+      id: 10,
       title: 'Beef Stir-Fry with Vegetables',
       image_url: 'https://cdn.momsdish.com/wp-content/uploads/2021/07/Steak-Stir-Fry-Recipe-014-1200x1800.jpg',
       description: 'Quick and flavorful beef stir-fry loaded with colorful vegetables',
