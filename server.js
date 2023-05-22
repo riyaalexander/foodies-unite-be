@@ -13,9 +13,10 @@ const recipesRoutes = require('./routes/recipes');
 app.use('/recipes', recipesRoutes);
 
 app.get('/', (req, res) => {
+  console.log("Hi");
   res.send('Hello, world!');
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${5500}`);
+  console.log(`Server is running on port ${port}`);
 });
