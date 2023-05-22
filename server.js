@@ -8,10 +8,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(errorHandler);
 
+
 const recipesRoutes = require('./routes/recipes');
 app.use('/recipes', recipesRoutes);
 
 app.get('/', (req, res) => {
+    console.log('GET request received on root endpoint');
   res.send('whats up, world!');
 });
 
