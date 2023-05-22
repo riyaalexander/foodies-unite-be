@@ -1,5 +1,5 @@
 const errorHandler = (err, req, res, next) => {
-    console.error(err); 
+    console.error(err);
   
     if (err instanceof CustomNotFoundError) {
       res.status(404).json({ error: 'Not Found' });
