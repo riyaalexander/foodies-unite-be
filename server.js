@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5500
 const errorHandler = require('./middleware/errorHandler')
 const db = require('./db');
 
@@ -12,9 +12,9 @@ const recipesRoutes = require('./routes/recipes');
 app.use('/recipes', recipesRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Hello, world!');
+  res.send('whats up, world!');
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${3000}`);
+  console.log(`Server is running on port ${5500}`);
 });

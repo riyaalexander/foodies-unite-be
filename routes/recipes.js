@@ -5,8 +5,9 @@ const db = require('../db');
 // Create a new recipe
 router.post('/', async (req, res) => {
   try {
-    const { title, image_url, description, ingredients, instructions, prep_time, difficulty } = req.body;
+    const { id, title, image_url, description, ingredients, instructions, prep_time, difficulty } = req.body;
     const newRecipe = await db('recipes').insert({
+      id,
       title,
       image_url,
       description,
@@ -31,26 +32,29 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Read a single recipe
+/// Read a single recipe
 router.get('/:id', async (req, res) => {
-  try {
-    const recipe = await db('recipes').where('id', req.params.id).first();
-    if (!recipe) {
-      res.status(404).json({ error: 'Recipe not found' });
-    } else {
-      res.json(recipe);
+    try {
+      const recipe = await db('recipes').where('id', req.params.id).first();
+      if (!recipe) {
+        res.status(404).json({ error: 'Recipe not found' });
+      } else {
+        res.json(recipe);
+      }
+    } catch (error) {
+      res.status(500).json({ error: 'Unable to fetch recipe' });
     }
-  } catch (error) {
-    res.status(500).json({ error: 'Unable to fetch recipe' });
-  }
-});
+  });
+  
+  
 
 // Update a recipe
 router.put('/:id', async (req, res) => {
   try {
-    const { title, description, ingredients, instructions, prep_time, difficulty } = req.body;
+    const { id, title, description, ingredients, instructions, prep_time, difficulty } = req.body;
     const updatedRecipe = await db('recipes').where('id', req.params.id).update({
-      title,
+      id,
+      title,      
       description,
       ingredients,
       instructions,
